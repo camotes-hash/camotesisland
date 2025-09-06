@@ -69,10 +69,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-teal-600 text-white py-6 text-center">
-    <p>&copy; 2025 Camotes Island Tourism. All Rights Reserved.</p>
-  </footer>
+<footer class="bg-teal-600 text-white py-6 text-center">
+  <p>&copy; 2025 Camotes Island Tourism. All Rights Reserved.</p>
+  <p>
+    👥 Visitors Today: 
+    <?php include "visitor.html"; echo $today; ?> |
+    📅 This Month: 
+    <?php echo $month; ?>
+  </p>
+</footer>
 
 </body>
 </html>
+
