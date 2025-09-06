@@ -24,18 +24,8 @@ file_put_contents($logFile, $log, FILE_APPEND);
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Custom animation for slide down */
-    .menu-hidden {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, opacity 0.3s ease;
-    }
-    .menu-show {
-      max-height: 500px; /* enough height to fit menu */
-      opacity: 1;
-      transition: max-height 0.4s ease, opacity 0.3s ease;
-    }
+    .menu-hidden { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; }
+    .menu-show { max-height: 500px; opacity: 1; transition: max-height 0.4s ease, opacity 0.3s ease; }
   </style>
 </head>
 <body class="font-sans bg-gray-50 text-gray-800">
@@ -44,36 +34,21 @@ file_put_contents($logFile, $log, FILE_APPEND);
   <nav class="bg-white shadow-md fixed top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="index.html" class="text-2xl font-bold text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-umbrella-beach text-teal-600"></i> 
-        Camotes Island
+        <i class="fa-solid fa-umbrella-beach text-teal-600"></i> Camotes Island
       </a>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-6 text-gray-700 font-medium">
-        <a href="index.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-house"></i> Home
-        </a>
-        <a href="about.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-info-circle"></i> About
-        </a>
-        <a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-map-location-dot"></i> Attractions
-        </a>
-        <a href="hotels.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-hotel"></i> Hotels
-        </a>
-        <a href="food.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-utensils"></i> Food
-        </a>
-        <a href="contact.html" class="hover:text-teal-600 flex items-center gap-2">
-          <i class="fa-solid fa-envelope"></i> Contact
-        </a>
+        <a href="index.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-info-circle"></i> About</a>
+        <a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Attractions</a>
+        <a href="hotels.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-hotel"></i> Hotels</a>
+        <a href="food.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-utensils"></i> Food</a>
+        <a href="contact.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-envelope"></i> Contact</a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
-        ☰
-      </button>
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">☰</button>
     </div>
 
     <!-- Mobile Dropdown -->
@@ -93,29 +68,98 @@ file_put_contents($logFile, $log, FILE_APPEND);
 
   <!-- Hero Section -->
   <section class="relative h-screen bg-cover bg-center" style="background-image: url('camotes-beach.jpg');">
-    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center text-white">
+    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center text-white px-4">
       <h1 class="text-5xl md:text-7xl font-bold">Camotes Island, Cebu</h1>
       <p class="mt-4 text-xl md:text-2xl">Discover Paradise in the Heart of Cebu</p>
-      <a href="attractions.html" class="mt-6 px-6 py-3 bg-teal-500 hover:bg-teal-600 rounded-full text-lg">Explore Now</a>
+      <div class="mt-6 flex flex-wrap gap-4 justify-center">
+        <a href="attractions.html" class="px-6 py-3 bg-teal-500 hover:bg-teal-600 rounded-full text-lg">Explore Now</a>
+        <a href="contact.html" class="px-6 py-3 bg-white text-teal-600 hover:bg-gray-200 rounded-full text-lg">Book a Tour</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info Section -->
+  <section class="py-16 px-6 md:px-20 text-center">
+    <h2 class="text-3xl font-bold text-teal-600 mb-10">Why Visit Camotes?</h2>
+    <div class="grid gap-8 md:grid-cols-4">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-water text-4xl text-teal-500 mb-4"></i>
+        <h3 class="font-bold text-lg">Pristine Beaches</h3>
+        <p class="text-gray-600">Crystal clear waters and powdery white sand.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-hotel text-4xl text-teal-500 mb-4"></i>
+        <h3 class="font-bold text-lg">Resorts & Hotels</h3>
+        <p class="text-gray-600">Comfortable stays for every budget.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-person-swimming text-4xl text-teal-500 mb-4"></i>
+        <h3 class="font-bold text-lg">Adventure Awaits</h3>
+        <p class="text-gray-600">Snorkeling, island hopping, and more.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <i class="fa-solid fa-utensils text-4xl text-teal-500 mb-4"></i>
+        <h3 class="font-bold text-lg">Local Cuisine</h3>
+        <p class="text-gray-600">Taste the authentic flavors of Cebu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Attractions -->
+  <section class="py-16 px-6 md:px-20 bg-gray-100">
+    <h2 class="text-3xl font-bold text-teal-600 text-center mb-10">Top Attractions</h2>
+    <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div class="bg-white rounded-lg shadow hover:shadow-xl overflow-hidden">
+        <img src="lake-danao.jpg" alt="Lake Danao" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Lake Danao</h3>
+          <p class="text-gray-600">A serene lake perfect for kayaking and picnics.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-xl overflow-hidden">
+        <img src="santiago-bay.jpg" alt="Santiago Bay" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Santiago Bay</h3>
+          <p class="text-gray-600">Wide sandy beach with beautiful sunsets.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-xl overflow-hidden">
+        <img src="timubo-cave.jpg" alt="Timubo Cave" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Bukilat Cave</h3>
+          <p class="text-gray-600">A mystical cave with natural pools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-16 px-6 md:px-20 text-center">
+    <h2 class="text-3xl font-bold text-teal-600 mb-10">Find Us on the Map</h2>
+    <div class="max-w-6xl mx-auto">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.422!2d124.365!3d10.620!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sph!4v0000000000" width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-teal-600 text-white py-6 text-center">
+  <footer class="bg-teal-600 text-white py-8 text-center">
     <p>&copy; 2025 Camotes Island Tourism. All Rights Reserved.</p>
+    <div class="flex justify-center gap-6 mt-4 text-xl">
+      <a href="https://facebook.com" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank" class="hover:text-gray-200"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com" target="_blank" class="hover:text-red-400"><i class="fab fa-youtube"></i></a>
+    </div>
   </footer>
 
   <!-- Script for Mobile Menu -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
-
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("menu-show");
       menu.classList.toggle("menu-hidden");
     });
-
-    // Optional: Auto close menu after clicking a link
     document.querySelectorAll("#menu a").forEach(link => {
       link.addEventListener("click", () => {
         menu.classList.add("menu-hidden");
