@@ -1,0 +1,28 @@
+<?php
+$logFile = "logs.txt";
+$ip = $_SERVER['REMOTE_ADDR'];
+$time = date("Y-m-d H:i:s");
+
+// Append visitor log
+file_put_contents($logFile, "$ip - $time\n", FILE_APPEND);
+
+// Read logs
+$logs = file($logFile, FILE_IGNORE_NEW_LINES);
+
+// Counters
+$today = 0;
+$month = 0;
+
+foreach ($logs as $log) {
+    if (preg_match("/ - (\d{4}-\d{2}-\d{2})/", $log, $matches)) {
+        $date = $matches[1];
+
+        if ($date == date("Y-m-d")) {
+            $today++;
+        }
+        if (substr($date, 0, 7) == date("Y-m")) {
+            $month++;
+        }
+    }
+}
+?>
