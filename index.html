@@ -79,12 +79,12 @@ file_put_contents($logFile, $log, FILE_APPEND);
     <!-- Mobile Dropdown -->
     <div id="menu" class="menu-hidden md:hidden bg-white shadow-md">
       <ul class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-700">
-        <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
-        <li><a href="about.html" class="hover:text-teal-600">About</a></li>
-        <li><a href="attractions.html" class="hover:text-teal-600">Attractions</a></li>
-        <li><a href="hotels.html" class="hover:text-teal-600">Hotels</a></li>
-        <li><a href="food.html" class="hover:text-teal-600">Food</a></li>
-        <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+        <li><a href="index.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-info-circle"></i> About</a></li>
+        <li><a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Attractions</a></li>
+        <li><a href="hotels.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-hotel"></i> Hotels</a></li>
+        <li><a href="food.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-utensils"></i> Food</a></li>
+        <li><a href="contact.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-envelope"></i> Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -113,6 +113,14 @@ file_put_contents($logFile, $log, FILE_APPEND);
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("menu-show");
       menu.classList.toggle("menu-hidden");
+    });
+
+    // Optional: Auto close menu after clicking a link
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("menu-hidden");
+        menu.classList.remove("menu-show");
+      });
     });
   </script>
 
