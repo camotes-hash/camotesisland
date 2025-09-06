@@ -5,57 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Camotes Island Tourism</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
+<body class="font-sans bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
   <!-- Navbar -->
-<nav class="bg-white shadow-md fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-2xl font-bold text-teal-600 flex items-center gap-2">
-      <i class="fa-solid fa-umbrella-beach text-teal-600"></i> 
-      Camotes Island
-    </a>
-    <div class="space-x-6 text-gray-700 font-medium flex items-center">
-      <a href="index.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-house"></i> Home
+  <nav class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-teal-600 flex items-center gap-2">
+        <i class="fa-solid fa-umbrella-beach text-teal-600"></i> 
+        Camotes Island
       </a>
-      <a href="about.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-info-circle"></i> About
-      </a>
-      <a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-map-location-dot"></i> Attractions
-      </a>
-      <a href="hotels.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-hotel"></i> Hotels
-      </a>
-      <a href="food.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-utensils"></i> Food
-      </a>
-      <a href="contact.html" class="hover:text-teal-600 flex items-center gap-2">
-        <i class="fa-solid fa-envelope"></i> Contact
-      </a>
+      <div class="space-x-6 text-gray-700 font-medium flex items-center">
+        <a href="index.html" class="hover:text-teal-600 flex items-center gap-2">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="about.html" class="hover:text-teal-600 flex items-center gap-2">
+          <i class="fa-solid fa-info-circle"></i> About
+        </a>
+        <a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot"></i> Attractions
+        </a>
+        <a href="hotels.html" class="hover:text-teal-600 flex items-center gap-2">
+          <i class="fa-solid fa-hotel"></i> Hotels
+        </a>
+        <a href="food.html" class="hover:text-teal-600 flex items-center gap-2">
+          <i class="fa-solid fa-utensils"></i> Food
+        </a>
+        <a href="contact.html" class="text-teal-600 font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-envelope"></i> Contact
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <div class="pt-20"></div>
 
-  <div class="pt-20"></div>
-  <section class="py-16 px-8 md:px-20">
+  <!-- Contact Form Section -->
+  <section class="py-16 px-8 md:px-20 flex-grow">
     <h2 class="text-3xl font-bold text-teal-600 text-center mb-10">Contact Us</h2>
     <form class="max-w-2xl mx-auto bg-white shadow-lg rounded-xl p-8 space-y-6">
-      <input type="text" placeholder="Your Name" class="w-full border rounded-lg p-3">
-      <input type="email" placeholder="Your Email" class="w-full border rounded-lg p-3">
-      <textarea placeholder="Your Message" class="w-full border rounded-lg p-3 h-32"></textarea>
-      <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-lg">Send Message</button>
+      <input type="text" placeholder="Your Name" class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-teal-400 outline-none">
+      <input type="email" placeholder="Your Email" class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-teal-400 outline-none">
+      <textarea placeholder="Your Message" class="w-full border rounded-lg p-3 h-32 focus:ring-2 focus:ring-teal-400 outline-none"></textarea>
+      <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-lg transition">
+        <i class="fa-solid fa-paper-plane mr-2"></i> Send Message
+      </button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-teal-600 text-white py-6 text-center">
     <p>&copy; 2025 Camotes Island Tourism. All Rights Reserved.</p>
   </footer>
 
 </body>
 </html>
-
