@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<?php
+// File where we save logs
+$logFile = "logs.txt";
+
+// Get visitor info
+$ip = $_SERVER['REMOTE_ADDR'];
+$browser = $_SERVER['HTTP_USER_AGENT'];
+$time = date("Y-m-d H:i:s");
+$page = $_SERVER['REQUEST_URI'];
+
+// Create log entry
+$log = "[$time] IP: $ip | Page: $page | Browser: $browser" . PHP_EOL;
+
+// Save to logs.txt (append mode)
+file_put_contents($logFile, $log, FILE_APPEND);
+?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -86,3 +103,4 @@
 
 </body>
 </html>
+
