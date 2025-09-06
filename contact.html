@@ -12,10 +12,13 @@
   <!-- Navbar -->
   <nav class="bg-white shadow-md fixed top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
       <a href="index.html" class="text-2xl font-bold text-teal-600 flex items-center gap-2">
         <i class="fa-solid fa-umbrella-beach text-teal-600"></i> Camotes Island
       </a>
-      <div class="space-x-6 text-gray-700 font-medium flex items-center">
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 text-gray-700 font-medium items-center">
         <a href="index.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-house"></i> Home</a>
         <a href="about.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-info-circle"></i> About</a>
         <a href="attractions.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Attractions</a>
@@ -23,6 +26,21 @@
         <a href="food.html" class="hover:text-teal-600 flex items-center gap-2"><i class="fa-solid fa-utensils"></i> Food</a>
         <a href="tourguides.html" class="text-teal-600 font-semibold flex items-center gap-2"><i class="fa-solid fa-user-tie"></i> Tour Guides</a>
       </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl text-teal-600 focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <a href="index.html" class="block px-6 py-3 border-b hover:bg-gray-100 flex items-center gap-2"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html" class="block px-6 py-3 border-b hover:bg-gray-100 flex items-center gap-2"><i class="fa-solid fa-info-circle"></i> About</a>
+      <a href="attractions.html" class="block px-6 py-3 border-b hover:bg-gray-100 flex items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Attractions</a>
+      <a href="hotels.html" class="block px-6 py-3 border-b hover:bg-gray-100 flex items-center gap-2"><i class="fa-solid fa-hotel"></i> Hotels</a>
+      <a href="food.html" class="block px-6 py-3 border-b hover:bg-gray-100 flex items-center gap-2"><i class="fa-solid fa-utensils"></i> Food</a>
+      <a href="tourguides.html" class="block px-6 py-3 hover:bg-gray-100 flex items-center gap-2 text-teal-600 font-semibold"><i class="fa-solid fa-user-tie"></i> Tour Guides</a>
     </div>
   </nav>
 
@@ -79,6 +97,15 @@
   <footer class="bg-teal-600 text-white py-6 text-center">
     <p>&copy; 2025 Camotes Island Tourism. All Rights Reserved.</p>
   </footer>
+
+  <!-- Script for mobile menu toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
